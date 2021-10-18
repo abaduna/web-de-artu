@@ -1,0 +1,97 @@
+:root {
+  --color-principal: rgb(0, 255, 64);
+  --color-segundo: rgb(253, 237, 5);
+  --color-tercero: rgb(251, 28, 28);
+}
+body {
+  background: radial-gradient(
+    circle,
+    rgb(255, 0, 242),
+    rgba(137, 43, 226, 0.678)
+  );
+}
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: black;
+}
+ul {
+  list-style: none;
+}
+.contenedor {
+  display: grid;
+  background: rgb(
+    rgb(182, 107, 107),
+    rgb(118rgb (28, 28, 192) 4, 118),
+    rgb(106, 106, 240)
+  );
+
+  grid-template-areas:
+    " header header header "
+    "main main main"
+    "main main main"
+    "main main main"
+    "main main main"
+    "main main main"
+    "main main main"
+    "main main main"
+    "main main main"
+    "main main main"
+    "main main main"
+    "footer footer footer";
+  grid-auto-rows: minmax(100px, auto);
+  grid-template-columns: repeat(3, minmax(300px, 500px));
+  grid-template-rows: 100px 100px;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: rgb(9, 90, 13);
+  width: 100%;
+  text-align: left;
+}
+
+.header {
+  background-color: rgb(33, 194, 140);
+  grid-area: header;
+  width: 100%;
+  position: fixed;
+  text-align: left;
+  display: flex;
+}
+.main {
+  background-color: rgb(105, 0, 0);
+  grid-area: main;
+}
+.footer-ul li {
+  display: inline-block;
+  margin: 25px;
+  flex-direction: row;
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+}
+.footer-ul li a {
+  width: -25px;
+}
+.header li {
+  display: inline-block;
+  margin: 25px;
+}
+.link:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0.329);
+  transition: all 0.5s;
+}
+.link {
+  width: 70px;
+  height: 25px;
+  background-color: var(--color-segundo);
+  border: 1px solid red;
+}
+
+@font-face {
+  font-family: "FontAwesome";
+  src: url("fontawesome-webfont.woff");
+}
